@@ -1,9 +1,15 @@
 @font-face {
-    font-family: "Miller-TextRoman";
-    src: url("../fonts/Miller-TextRoman-kopi.otf") format("truetype");
+    font-family: "miller-textroman";
+    src: url("../fonts/miller-TextRoman-kopi.otf") format("truetype");
   }
+
+  @font-face {
+    font-family: "arquitecta";
+    src: url("../fonts/arquitecta-kopi.otf") format("truetype");
+  }
+
   body{
-    font-family: Miller-TextRoman; 
+    font-family: miller-textroman; 
     margin: 0;
     max-width: 479px;
     margin: 0 auto;
@@ -82,15 +88,63 @@ a {
 /* Generel styling til logoet */
 .logo {
     position: absolute;
-    top: 50px; /* Juster værdien efter behov */
+    top: 20px; 
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 10px;
   }
   
+  .logo img {
+    width: 200px; 
+    height: auto;
+  }
+
   /* Styling specifikt til mobilversionen */
   @media (max-width: 768px) {
     .logo {
-      top: 20px; /* Juster værdien efter behov for den ønskede afstand fra toppen */
+      top: 20px; 
+    }
+  }
+  @media (max-width: 768px) {
+    .image-container img {
+      width: 100%; /* Fuld bredde på mobilversionen */
     }
   }
   
+  .logo {
+    text-align: center;
+  }
+/* Generel styling til forsiden af billederne */
+  .image-container {
+    display: flex; /* Brug fleksboks-layout */
+    flex-wrap: wrap; /* Wrap elementerne på flere rækker */
+    justify-content: space-between; /* Placer elementerne med lige mellemrum */
+    margin-top: 100px;
+  }
+
+  .image-container img {
+    width: 48%; /* Juster bredden af billederne efter behov */
+    margin-bottom: 10px; /* Tilføj en afstand mellem billederne */
+  }
+
+/* Generel styling til forsiden af kræftforskning */
+  .square {
+    width: 100%;
+    height: 200px; 
+    background-color: #835582;
+    text-align: center; 
+    color: white; 
+    font-size: 100px;
+    font-family: miller-textroman;
+    padding-top: 20px; /* Juster afstanden mellem firkanten og teksten */
+  }
+
+  .square button {
+    background-color: black; 
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 18px; 
+    border: none; 
+    border-radius: 4px;
+    font-family: arquitecta;
+  }
