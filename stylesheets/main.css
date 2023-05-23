@@ -1,16 +1,96 @@
 @font-face {
-    font-family: fonts/Miller-TextRoman-kopi.otf;
-    src: url(/fonts/Miller-TextRoman-kopi.otf);
-}
-header {
-    background-color: #f2f2f2;
+    font-family: "Miller-TextRoman";
+    src: url("../fonts/Miller-TextRoman-kopi.otf") format("truetype");
+  }
+  body{
+    font-family: Miller-TextRoman; 
+    margin: 0;
+    max-width: 479px;
+    margin: 0 auto;
+    background-color:#FFFFFF;
     padding: 20px;
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight:bold;
+    color: #000000;
+    margin: 0;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+}
+
+p {
+    font-size: 14px;
+    font-weight:300;
+    margin: 0;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.filter-text {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+
+}
+
+/* NAVBAR */
+
+.nav-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background-color: #CAE4E3;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 15px 0;
+    width: 100%;
+    flex-shrink: 0;
+    border-top: #00454E solid 1px;
+}
+
+    .nav-tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .nav-icon {
+            height: 26px;
+            margin-bottom: 5px;
+        }
+
+/* Generel styling til logoet */
+.logo {
+    position: absolute;
+    top: 50px; /* Juster værdien efter behov */
+    left: 50%;
+    transform: translateX(-50%);
   }
   
-  h1 {
-    font-family: 'Miller-TextRoman-kopi.otf', sans-serif;
-    font-size: 24px;
-    color: #333;
-    margin: 0;
+  /* Styling specifikt til mobilversionen */
+  @media (max-width: 768px) {
+    .logo {
+      top: 20px; /* Juster værdien efter behov for den ønskede afstand fra toppen */
+    }
   }
   
