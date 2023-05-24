@@ -65,13 +65,14 @@ a {
     bottom: 0;
     left: 0;
     display: flex;
-    background-color: #CAE4E3;
+    background-color: #FFFFFF;
     justify-content: space-around;
     align-items: flex-end;
     padding: 15px 0;
     width: 100%;
     flex-shrink: 0;
     border-top: #00454E solid 1px;
+    z-index: 2;
 }
 
     .nav-tab {
@@ -99,6 +100,10 @@ a {
     height: auto;
   }
 
+  .logo {
+    text-align: center;
+  }
+
   /* Styling specifikt til mobilversionen */
   @media (max-width: 768px) {
     .logo {
@@ -107,36 +112,61 @@ a {
   }
   @media (max-width: 768px) {
     .image-container img {
-      width: 100%; /* Fuld bredde på mobilversionen */
+      width: 100%; 
     }
   }
   
-  .logo {
-    text-align: center;
-  }
 /* Generel styling til forsiden af billederne */
+
   .image-container {
-    display: flex; /* Brug fleksboks-layout */
-    flex-wrap: wrap; /* Wrap elementerne på flere rækker */
-    justify-content: space-between; /* Placer elementerne med lige mellemrum */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
     margin-top: 100px;
   }
 
   .image-container img {
-    width: 48%; /* Juster bredden af billederne efter behov */
-    margin-bottom: 10px; /* Tilføj en afstand mellem billederne */
+    width: 48%; 
+    margin-bottom: 10px; 
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+  }
+  
+  .image-container a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
 /* Generel styling til forsiden af kræftforskning */
   .square {
     width: 100%;
-    height: 200px; 
+    height: 300px; 
     background-color: #835582;
     text-align: center; 
     color: white; 
     font-size: 100px;
     font-family: miller-textroman;
-    padding-top: 20px; /* Juster afstanden mellem firkanten og teksten */
+    padding-top: 20px; 
+  }
+  .square p.større {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .square p.mindre-undertekst {
+    font-style: arquitecta;
+    font-family: arquitecta;
+    margin-top: 40px;
+    font-size: 16px;
+    color: #FFFFFF
+    
   }
 
   .square button {
@@ -148,3 +178,231 @@ a {
     border-radius: 4px;
     font-family: arquitecta;
   }
+
+  /* Generel styling til dame-undersiden */
+header {
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 20px;
+}
+
+.header-content {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .header-content::-webkit-scrollbar {
+    display: none; /* Til Chrome, Safari og Opera */
+  }
+
+
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav-menu li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.content-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .full-width-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .image-text {
+    background-color: rgba(0, 0, 0, 0);
+    color: #707070;
+    padding: 20px;
+    margin-top: -10px;
+    font-family: arquitecta;
+    font-size: 10px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 20px;
+    cursor: pointer;
+  }
+  
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .image-grid img {
+    width: calc(33.33% - 10px);
+    margin: 5px;
+  }
+  
+  .my-heading {
+    font-size: 30px;
+    font-family: "miller-textroman";
+    text-align: center;
+    font-weight: bold;
+    color: #000000
+
+  }
+
+  .containerto {
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.neye20 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: "miller-textroman";
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+}
+
+.images-container img {
+  width: 50%;
+  margin: 0 10px;
+}
+
+ .containertre {
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.kontainer {
+    text-align: center;
+  }
+  
+  .populære {
+    font-family: "miller-textroman";
+    font-size: 30px;
+    padding-top: 30px;
+  }
+  
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -2px;
+  }
+  
+  .image-box {
+    flex-basis: 25%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-box img {
+    width: 135px;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .image-text {
+    font-family: arquitecta;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    padding: 10px;
+  }
+  
+  .image-text-line {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 0px;
+  }
+  
+  .image-price-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image-text-line-crossover {
+    text-decoration: line-through;
+    font-family: arquitecta;
+    font-weight: bold;
+    display: inline;
+  }
+  
+  .image-text-line-price {
+    text-decoration: none;
+    display: inline;
+    margin-left: 5px;
+    font-family: arquitecta;
+    font-weight: bold;
+    color: #DE737A;
+  }
+  
+  .custom-container {
+    text-align: center;
+  }
+  
+  .custom-image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -2px;
+  }
+  
+  .custom-image-box {
+    flex-basis: 50%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .custom-image-box img {
+    height: auto;
+    cursor: pointer;
+    width: 219px;
+    margin: 0px;
+  }
+
+.containerfire {
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 200%;
+  }
+
+  .containerfem {
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 200%;
+  }
+
+  .storbillede {
+    width: 155px;
+    height: auto;
+  }
+  
+  
