@@ -93,6 +93,7 @@ a {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 10px;
+    text-align: center;
   }
   
   .logo img {
@@ -100,50 +101,42 @@ a {
     height: auto;
   }
 
-  .logo {
-    text-align: center;
-  }
-
-  /* Styling specifikt til mobilversionen */
-  @media (max-width: 768px) {
-    .logo {
-      top: 20px; 
-    }
-  }
-  @media (max-width: 768px) {
-    .image-container img {
-      width: 100%; 
-    }
-  }
-  
-/* Generel styling til forsiden af billederne */
-
-.image-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 100px;
-}
-
-.image-container img {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.image-container a {
-  position: relative;
-  width: 48%;
-}
-
+ /* Styling specifikt til mobilversionen */
 @media (max-width: 768px) {
+  .logo {
+    top: 20px; 
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
   .image-container img {
-    width: 100%;
+    width: 100%; 
+    margin-bottom: 10px;
   }
 
   .image-container a {
     width: 100%;
   }
 }
+
+/* Generel styling til forsiden af billederne */
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-top: 100px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
 
 
 /* Generel styling til forsiden af kræftforskning */
@@ -250,12 +243,25 @@ header {
   .image-grid {
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  .image-grid img {
-    width: calc(33.33% - 10px);
-    margin: 5px;
-  }
+    justify-content: center;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image-link {
+    margin: 0 10px;
+}
+
+.image-link img {
+    width: 120px;
+    height: auto;
+}
+
+
   
   .my-heading {
     font-size: 30px;
@@ -293,83 +299,94 @@ header {
   margin-top: 20px;
   cursor: pointer;
 }
-
 .kontainer {
-    text-align: center;
-  }
-  
-  .populære {
-    font-family: "miller-textroman";
-    font-size: 30px;
-    padding-top: 30px;
-  }
-  
-  .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: -2px;
-  }
-  
-  .image-box {
-    flex-basis: 25%;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .image-box img {
-    width: 135px;
-    height: auto;
-    cursor: pointer;
-  }
-  
-  .image-text {
-    font-family: arquitecta;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    color: #000000;
-    padding: 10px;
-  }
-  
-  .image-text-line {
-    font-size: 14px;
-    font-weight: normal;
-    margin-top: 0px;
-  }
-  
-  .image-price-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .image-text-line-crossover {
-    text-decoration: line-through;
-    font-family: arquitecta;
-    font-weight: bold;
-    display: inline;
-  }
-  
-  .image-text-line-price {
-    text-decoration: none;
-    display: inline;
-    margin-left: 5px;
-    font-family: arquitecta;
-    font-weight: bold;
-    color: #DE737A;
-  }
+  text-align: center;
+}
 
-  .image-text-line-price-black {
-    text-decoration: none;
-    margin-left: 5px;
-    font-family: arquitecta;
-    font-weight: bold;
-    color: #000000;
-  }
-  
+.populaere {
+  font-family: "miller-textroman";
+  font-size: 30px;
+  padding-top: 30px;
+}
+
+.image-gallery {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.image-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.image-box {
+  flex: 0 0 calc(100% / 3);
+  scroll-snap-align: start;
+  margin-right: 10px; 
+}
+
+.image-box:last-child {
+  margin-right: 0; 
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.image-text {
+  font-family: arquitecta;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  padding: 10px;
+}
+
+.image-text-line {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.image-price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.image-text-line-crossover {
+  text-decoration: line-through;
+  font-family: arquitecta;
+  font-weight: bold;
+  display: inline;
+}
+
+.image-text-line-price {
+  text-decoration: none;
+  display: inline;
+  margin-left: 5px;
+  font-family: arquitecta;
+  font-weight: bold;
+  color: #de737a;
+}
+
+.image-text-line-price-black {
+  text-decoration: none;
+  margin-left: 5px;
+  font-family: arquitecta;
+  font-weight: bold;
+  color: #000000;
+}
+
+
   .custom-container {
     text-align: center;
   }
@@ -413,4 +430,200 @@ header {
   }
 
   /* Generel styling til herre-undersiden */
+
+  .content-tainer {
+    text-align: center;
+  }
+  
+  .maaneden {
+    font-family: "miller-textroman";
+    font-size: 30px;
+    padding-top: 30px;
+  }
+  
+  .image-tainer {
+    margin-top: 20px;
+  }
+  
+  .full-width-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+    /* Generel styling til skuldertaske-undersiden */
+    .container-skuldertaske {
+      font-family: miller-textroman;
+      margin: 0;
+      max-width: 479px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-bottom: 60px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Opdateret til at have 2 kolonner */
+      grid-gap: 20px;
+  }
+
+  .back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .back-button img {
+    width: 40px;
+  }
+  
+  .image-contain {
+    font-family: miller-textroman;
+    margin: 0;
+    max-width: 479px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.image-pair {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.image-skuldertaske {
+    flex-basis: calc(50% - 10px); 
+    margin-bottom: 20px;
+}
+
+.image-skuldertaske img {
+    width: 100%;
+    height: auto;
+}
+
+/*Anna's styling af hendes javascript*/
+
+.slider{ 
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slidestart{ 
+  width: 500%;
+  height: 500%;
+  display: flex;
+}
+
+.slidestart input{ 
+  display: none;
+}
+
+
+.slide{ 
+  width: 20%;
+  transition: 2s;  /* forandrer hastigheden på transition af funktionen */
+}
+
+.slide img{ 
+  width: 500px;
+  height: 500px;
+
+}
+
+/*css for selve manual slide navigation*/
+
+.navigation-manual{ 
+  position: absolute;
+  width: 500px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{ 
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s; /* hvor hurtih knappen bliver sort*/
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: black;
+} 
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+} 
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+} 
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+} 
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+} 
+
+#radio5:checked ~ .first{
+  margin-left: -80%;
+} 
+
+
+/*css for automatisk navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 500px;
+  justify-content: center;
+  margin-top: 460px;
+} 
+
+.navigation-auto div{
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 2s; 
+} 
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: black;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: black;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: black;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: black;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5{
+  background: black;
+}
+
+
 
