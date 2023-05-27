@@ -508,16 +508,16 @@ header {
 
 /*Anna's styling af hendes javascript*/
 
-.slider{ 
-  width: 500px;
-  height: 500px;
+slider{ 
+  width: 450px;
+  height: 450px;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .slidestart{ 
-  width: 500%;
-  height: 500%;
+  width: 450%;
+  height: 460px;
   display: flex;
 }
 
@@ -532,8 +532,8 @@ header {
 }
 
 .slide img{ 
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
 
 }
 
@@ -541,7 +541,7 @@ header {
 
 .navigation-manual{ 
   position: absolute;
-  width: 500px;
+  width: 450px;
   margin-top: -40px;
   display: flex;
   justify-content: center;
@@ -589,9 +589,9 @@ header {
 .navigation-auto{
   position: absolute;
   display: flex;
-  width: 500px;
+  width: 450px;
   justify-content: center;
-  margin-top: 460px;
+  margin-top: 420px;
 } 
 
 .navigation-auto div{
@@ -625,5 +625,10 @@ header {
   background: black;
 }
 
+/*
+AltGr + 7 = {
+AltGr + 0 = }
+{}  ∼
+*/
 
 
