@@ -43,6 +43,7 @@ p {
     font-size: 16px;
     font-weight:300;
     margin: 0;
+    font-family: arquitecta;
 }
 
 a {
@@ -694,7 +695,6 @@ header {
 .text-kontainer {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-top: 20px; /* Juster afstanden efter behov */
   text-align: center;
   margin-right: 15px;
@@ -883,6 +883,105 @@ width: 100%;
 object-fit: cover;
 vertical-align: bottom;
 }
+
+/* INDKØBSKURV */
+.forsaet-til-betaling {
+  width: 253px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  font-style: arquitecta;
+  font-family: arquitecta;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tainerr {
+  position: relative;
+  width: 800px;
+  height: 200px;
+  background-color: white;
+  padding-left: 400px; /* Tilføj den ønskede afstand til venstre */
+}
+
+.image {
+  float: left;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 150px;
+  font-style: arquitecta;
+  font-family: arquitecta;
+}
+
+.large-text {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-style: arquitecta;
+  font-family: arquitecta;
+
+}
+
+.smaller-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-style: arquitecta;
+  font-family: arquitecta;
+  font-weight: lighter;
+}
+
+.normal-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-style: arquitecta;
+  font-family: arquitecta;
+}
+
+.normal-text- {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-style: arquitecta;
+  font-family: arquitecta;
+  color: #707070;
+}
+
+.normal-pris{
+ font-size: 16px;
+  margin-bottom: 10px;
+  font-style: arquitecta;
+  font-family: arquitecta;
+  margin-top: 10px;
+
+}
+.northface-image {
+  width: 150px; 
+  height: auto;
+  margin-right: 20px; 
+}
+
+.smaller-button {
+  width: 40px;
+}
+.smaller-input {
+  width: 50px; /* Juster bredden efter behov */
+}
+
+
+
+
+
+
+
+
 
 
 

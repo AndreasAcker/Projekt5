@@ -1,42 +1,96 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klub NEYE | THE NORTH FACE DUFFLE BAG </title>
-    <link rel="stylesheet" href="../stylesheets/main.css">
-    <script src="../scripts/anna.js" defer></script>
-    <script src="../scripts/andreas.js" defer></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Klub NEYE │ Indkøbskurv</title>
+   <link rel="stylesheet" href="../stylesheets/main.css">
+   <script src="../scripts/andreas.js" defer></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
 </head>
 <body>
-    <div class="nav-wrapper">
-        <a href="../index.html">
-          <div class="nav-tab">
-            <img class="nav-icon" src="../images/hjem-aktiv.svg" alt="Gå til forsiden ikon">
-          </div>
+   <img class="sekundaerlogo" src="../images/neye-sekundaer.svg" alt="sekundaerlogo">
+   <img class="linje" src="../images/linje.svg" alt="linje">
+   <div class="billede-container">
+      <div>
+         <button class="forsaet-til-betaling">FORSÆT TIL BETALING</button>
+      </div>
+      <img class="linjeet" src="/images/linje.svg" alt="linjeet">
+      <div class="tainerr">
+        <a href="../pages/produkt-herre-taske.html">
+           <div class="image">
+              <img src="../images/northfaceen.png" alt="Billede" class="northface-image">
+           </div>
         </a>
-        <a href="udforsk.html">
-          <div class="nav-tab">
-            <img class="nav-icon" src="../images/soeg.svg" alt="Gå til udforsk ikon">
-          </div>
+        <div class="text">
+           <span class="large-text">The North Face - <span class="smaller-text">Duffel Bag Base Camp XL</span></span>
+           <span class="normal-text"><span class="bold-text">Farve</span> Sort</span>
+           <span class="normal-text-">5 tilbage på webshoppen. </span>
+           <span class="normal-text">Levering 1-2 dage - Fragt 0 kr. </span>
+           <span class="normal-pris" id="bag-total-1">1.299 kr<span class="normal-text-">  inkl. moms</span></span>
+           <div class="input-group number-spinner">
+              <button class="btn btn-default smaller-button" onclick="decrementPrice(1)"><i class="fas fa-minus"></i></button>
+              <input id="case-number-1" type="number" min="0" class="form-control text-center smaller-input" value="1">
+              <button class="btn btn-default smaller-button" onclick="incrementPrice(1)"><i class="fas fa-plus"></i></button>
+           </div>
+        </div>
+     </div>
+  
+     <div class="tainerr">
+        <a href="../pages/produkt-herre-taske.html">
+           <div class="image">
+              <img src="../images/dknyen.png" alt="Billede" class="northface-image">
+           </div>
         </a>
-        <a href="oenskeliste.html">
-          <div class="nav-tab">
-            <img class="nav-icon" src="../images/like.svg" alt="Gå til ønskeliste ikon">
-          </div>
+        <div class="text">
+           <span class="large-text">DKNY - <span class="smaller-text">Skuldertaske Carol </span></span>
+           <span class="normal-text"><span class="bold-text">Farve</span> Sort</span>
+           <span class="normal-text-">7 tilbage på webshoppen. </span>
+           <span class="normal-text">Levering 1-2 dage - Fragt 0 kr. </span>
+           <span class="normal-pris" id="bag-total-2">809,40 kr<span class="normal-text-">  inkl. moms</span></span>
+           <div class="input-group number-spinner">
+              <button class="btn btn-default smaller-button" onclick="decrementPrice(2)"><i class="fas fa-minus"></i></button>
+              <input id="case-number-2" type="number" min="0" class="form-control text-center smaller-input" value="1">
+              <button class="btn btn-default smaller-button" onclick="incrementPrice(2)"><i class="fas fa-plus"></i></button>
+           </div>
+        </div>
+     </div>
+  
+     <p id="total-price">Samlet beløb: 2.108,40 kr</p>
+     
+     
+      
+<div class="nav-wrapper">
+            <a href="../index.html">
+                <div class="nav-tab">
+                    <img class="nav-icon" src="../images/hjem.svg" alt="Gaa til forsiden ikon">
+                </div>
+            </a>
+            <a href="search.html">
+                <div class="nav-tab">
+                    <img class="nav-icon" src="../images/soeg.svg" alt="Gaa til soeg ikon">
+                </div>
+            </a>
+            <a href="oenskeliste.html">
+                <div class="nav-tab">
+                    <img class="nav-icon" src="../images/like.svg" alt="Gaa til ønskeliste ikon">
+                </div>
+            </a>
+            <a href="kurv.html">
+                <div class="nav-tab">
+                    <img class="nav-icon" src="../images/kurv-aktiv.svg" alt="Gaa til kurv ikon">
+                </div>
+            </a>
+            <a href="profil.html">
+                <div class="nav-tab">
+                    <img class="nav-icon" src="../images/profil.svg" alt="Gaa til profil siden ikon">
+                </div>
+            </a>
+        </div>
+        <a href="../pages/profil.html" class="back-button">
+            <img src="../images/tilbage-knap.svg" alt="Tilbage">
         </a>
-        <a href="../pages/indkoebskurv.html">
-          <div class="nav-tab">
-            <img class="nav-icon" src="../images/kurv.svg" alt="Gå til kurv ikon">
-            <span id="cart-count"></span> <!-- Elementet der viser antallet af produkter -->
-          </div>
-        </a>
-        <a href="../pages/profil.html">
-          <div class="nav-tab">
-            <img class="nav-icon" src="../images/profil.svg" alt="Gå til profil siden ikon">
-          </div>
-        </a>
-      </div>      
+        
 </body>
 </html>
