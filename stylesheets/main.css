@@ -34,10 +34,9 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 30px;
     color: #000000;
-    margin: 0;
+    font-family: "arquitecta";
 }
 
 p {
@@ -737,4 +736,154 @@ header {
   font-weight: bold;
   
 }
+
+.price {
+font-size: 10px;
+color: #707070;
+font-style: "arquitecta";
+font-family: "arquitecta";
+}
+
+.pris {
+  font-size: 25px;
+  font-style: "arquitecta";
+  font-family: "arquitecta";
+  margin-top: 20px;
+}
+
+.billede-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Juster margen efter behov */
+}
+
+.add-to-cart {
+  width: 253px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  font-style: "arquitecta";
+  font-family: "arquitecta";
+  margin-top: 60px;
+}
+
+.kraft-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; /* Juster margen efter behov */
+}
+
+.kraft-container img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.cancertekst {
+  font-size: 12px;
+  font-weight: normal;
+  color: #707070;
+  font-family: "arquitecta";
+}
+
+.gennemstreget-pris {
+  text-decoration: line-through;
+  font-size: 25px;
+  font-style: "arquitecta";
+  font-family: "arquitecta";
+  margin-top: 20px;
+}
+
+.ny-pris {
+  font-weight: bold;
+  color: #DF7B81;
+  font-size: 25px;
+  font-style: "arquitecta";
+  font-family: "arquitecta";
+  margin-top: 20px;
+}
+
+/*Profil side*/
+
+.sekundaerlogo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  text-align: center;
+}
+.sekundaerlogo img {
+  width: 200px;
+  height: auto;
+}
+.linje {
+  width: 101.5%;
+  margin-bottom: -20px;
+  padding-top: 100px;
+}
+.linjeet {
+  width: 101.5%;
+  margin-bottom: 15px;
+}
+
+.linjetre {
+  width: 101.5%;
+}
+
+.minprofil {
+font-size: 30px;
+font-family: arquitecta;
+text-align: center;
+}
+.profilliste {
+  font-size: 30px;
+  font-family: arquitecta;
+  text-align: left;
+  color:#000000;
+}
+.medlemskort {
+  left: 50%;
+  margin-top: -5px;
+  padding-left: 15%;
+}
+
+.search-field {
+  width: 100%;
+  height: 46px;
+  border-radius: 20px;
+  border: 1px solid #00454E;
+  background-color: #FFFFFF;
+  background-image: url(../images/searchicon.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 10px 5px;
+  text-indent: 40px;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 20px;
+  font-family: "arquitecta";
+}
+/* kategorier */
+
+.kategori {
+width: 100%;
+margin-bottom:20px;
+}
+.kategori-img {
+height: 140px;
+width: 100%;
+object-fit: cover;
+vertical-align: bottom;
+}
+
+
+
 
