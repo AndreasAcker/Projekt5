@@ -41,7 +41,7 @@ h3 {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
     font-weight:300;
     margin: 0;
 }
@@ -541,19 +541,18 @@ header {
 }
 
 /*Anna's styling af hendes javascript*/
-
 .slider{ 
   width: 450px;
   height: 450px;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 
 .slidestart{ 
-  width: 450px;
+  width: 450%;
   height: 460px;
   display: flex;
-  overflow: hidden;
 }
 
 .slidestart input{ 
@@ -562,10 +561,8 @@ header {
 
 
 .slide{ 
-  width: 450px;
-  height: 450px;
-  position: relative;
-  transition: 2s;  
+  width: 20%;
+  transition: 2s;  /* forandrer hastigheden på transition af funktionen */
 }
 
 .slide img{ 
@@ -662,6 +659,82 @@ header {
   background: black;
 }
 
+/*Ønskeliste knap*/
+.wishlist-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
 
+.wishlist-icon {
+  width: 43px;
+  height: 36px;
+  background: url("../images/like.svg") no-repeat center center;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
 
+.wishlist-icon.clicked {
+  background: url("../images/like-aktiv.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.tilbage-button {
+  width: 43px;
+  height: 36px;
+  background: url("../images/tilbage-knap.svg") no-repeat center center;
+  cursor: pointer;
+ border: none;
+  background-color: transparent;
+  margin-right: 350px; 
+}
+
+.text-kontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Juster afstanden efter behov */
+  text-align: center;
+  margin-right: 15px;
+}
+
+.big-text {
+  font-size: 25px;
+  margin-right: 10px; /* Juster margenen efter behov */
+  margin-bottom: 5px; /* Juster afstanden mellem big-text og small-text */
+  font-family: "miller-textroman";
+}
+
+.small-text {
+  font-size: 15px;
+  font-style: "arquitecta";
+  font-family: "arquitecta";
+}
+
+.tekst-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px; /* Juster afstanden efter behov */
+}
+
+.line {
+  font-style: "arquitecta";
+  font-family: "arquitecta";
+  margin-bottom: 10px; /* Juster afstanden mellem linjerne efter behov */
+}
+.line2 {
+  margin-bottom: 10px;
+  color: #707070; 
+  font-style: "arquitecta";
+  font-family: "arquitecta";
+}
+
+.bold-text {
+  font-weight: bold;
+  
+}
 

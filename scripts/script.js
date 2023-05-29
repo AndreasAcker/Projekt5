@@ -1,34 +1,31 @@
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('JavaScript er forbundet og fungerer.');
-  
-    // Resten af din JavaScript-kode herunder
-    // ...
-  });
-  
-document.addEventListener('DOMContentLoaded', function() {
-    var counter = 0;
-    var slides = document.querySelectorAll('.slide');
-  
-    function updateSlideMargin() {
-      var marginLeft = '-' + (counter * 100) + '%';
-      document.querySelector('.slidestart').style.marginLeft = marginLeft;
+var counter = 1;
+setInterval(function(){
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter > 5){
+        counter = 1;
     }
+}, 5000);
+
+// Funktion til at tilføje det aktuelle billede til ønskelisten
+function addToWishlist() {
+  var currentSlideIndex = counter - 1;
+  var currentSlideImage = slides[currentSlideIndex].querySelector('img').src;
   
-    setInterval(function() {
-      counter++;
-      if (counter >= slides.length) {
-        counter = 0;
-      }
-      updateSlideMargin();
-    }, 5000);
-  
-    // Lyt efter ændringer i radioknapperne
-    var radioBtns = document.querySelectorAll('input[name="radio-btn"]');
-    radioBtns.forEach(function(radioBtn, index) {
-      radioBtn.addEventListener('change', function() {
-        counter = index;
-        updateSlideMargin();
-      });
-    });
+  // Gem billedet i localStorage med et unikt nøgleværdi
+  localStorage.setItem('wishlistItem_' + currentSlideIndex, currentSlideImage);
+}
+
+// Lyt efter klik på ønskelisteknappen
+var wishlistButton = document.querySelector('.wishlist-icon');
+wishlistButton.addEventListener('click', toggleWishlist);
+
+// Funktion til at ændre knappens tilstand
+function toggleWishlist() {
+  wishlistButton.classList.toggle('clicked');
+}
+
+document.querySelector('.tilbage-button').addEventListener('click', function() {
+    history.back();
   });
   
