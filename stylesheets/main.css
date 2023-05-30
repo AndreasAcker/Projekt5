@@ -850,9 +850,8 @@ text-align: center;
   color:#000000;
 }
 .medlemskort {
-  left: 50%;
   margin-top: -5px;
-  padding-left: 15%;
+ margin-left: 50px;
 }
 
 .search-field {
