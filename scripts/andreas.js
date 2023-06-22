@@ -37,3 +37,13 @@ function updatePrice() {
     document.getElementById("total-price").innerHTML = "Samlet beløb: " + formattedPrice + " kr";
  }
  
+
+ variabler er en boks med hukommelse, en kasse man kan putte værdier i. så variabler gemmer navn og alder 
+
+ operater er værdiger på vairabler altså addition og subtraktion 
+
+ array er en datastruktur der kan opbevare elementer af samme type under et navn 
+
+ if-else er en kontrolstruktur. det giver mulighed for at styre programflowet 
+
+ Funktion udfører en bestemt beregning
